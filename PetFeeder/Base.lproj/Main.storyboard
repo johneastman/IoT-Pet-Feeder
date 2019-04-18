@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzW-bS-yfc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feeder-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PetFeeder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBx-jr-bxb">
+                                <rect key="frame" x="85" y="469" width="205" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
+                                <state key="normal" title="Feed Your Pet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedPetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHw-uV-8tl"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2p4-6K-8WY">
+                                <rect key="frame" x="103.5" y="307" width="168" height="113"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your pet has been fed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eap-eE-3BK">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="2qF-hq-wrN">
+                                        <rect key="frame" x="0.0" y="20.5" width="168" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="times today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kQ-QL-CRz">
+                                        <rect key="frame" x="0.0" y="92.5" width="168" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leF-E9-hBr">
+                                <rect key="frame" x="133.5" y="156" width="108" height="71.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="leF-E9-hBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="136" id="9Xg-QY-f97"/>
+                            <constraint firstItem="leF-E9-hBr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JQS-dL-VuL"/>
+                            <constraint firstItem="2p4-6K-8WY" firstAttribute="top" secondItem="leF-E9-hBr" secondAttribute="bottom" constant="79.5" id="NAG-Aa-8Jh"/>
+                            <constraint firstItem="2p4-6K-8WY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="44.5" id="NUN-s0-oaf"/>
+                            <constraint firstItem="2p4-6K-8WY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s0W-Wp-01E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feeder" image="feeder" id="BBt-75-5SY"/>
+                    <connections>
+                        <outlet property="feedPetButton" destination="dBx-jr-bxb" id="GBf-Oe-Fme"/>
+                        <outlet property="numTimesFedLabel" destination="2qF-hq-wrN" id="hPS-hR-2Wc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-232.53373313343329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MRG-j3-dZj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wzW-bS-yfc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="969-tW-v5z">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Cm9-GU-B6W"/>
+                        <segue destination="Yf2-7U-jCi" kind="relationship" relationship="viewControllers" id="Mw4-pO-SBT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwo-y7-0mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="122.78860569715144"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Oql-fc-KwG">
+            <objects>
+                <viewController id="Yf2-7U-jCi" customClass="SettingsViewController" customModule="PetFeeder" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7O-e0-a2u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-P7-Y9e">
+                                <rect key="frame" x="19" y="40" width="337.5" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g0E-J8-TuT">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeder Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-Ue-1z5">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9RD-6N-KU7">
+                                                <rect key="frame" x="115" y="0.0" width="222.5" height="29"/>
+                                                <segments>
+                                                    <segment title="On"/>
+                                                    <segment title="Off"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-DH-3B1">
+                                        <rect key="frame" x="0.0" y="48" width="337.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings Per Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-o4-6Lx">
+                                                <rect key="frame" x="0.0" y="5" width="134" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEj-fv-sX4">
+                                                <rect key="frame" x="142" y="0.0" width="195.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="feedingaction:" destination="Yf2-7U-jCi" eventType="editingDidEnd" id="Cam-Ec-EAE"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbw-B1-Ftv">
+                                        <rect key="frame" x="0.0" y="98" width="337.5" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="Yf2-7U-jCi" eventType="touchUpInside" id="X7s-Wl-mc6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hPI-P7-Y9e" firstAttribute="top" secondItem="gFy-ne-aUo" secondAttribute="top" constant="20" id="DEC-Or-8E3"/>
+                            <constraint firstItem="hPI-P7-Y9e" firstAttribute="centerX" secondItem="gFy-ne-aUo" secondAttribute="centerX" id="vxG-hA-KIB"/>
+                            <constraint firstItem="hPI-P7-Y9e" firstAttribute="width" secondItem="P7O-e0-a2u" secondAttribute="width" multiplier="0.9" id="zLC-bg-LfK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gFy-ne-aUo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Jwk-QV-Ti6"/>
+                    <connections>
+                        <outlet property="feederManualOverrideOutlet" destination="9RD-6N-KU7" id="330-vH-3PE"/>
+                        <outlet property="perDayInput" destination="cEj-fv-sX4" id="7vm-e7-Iwh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRx-iV-cdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="450.22488755622192"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feeder" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
+</document>

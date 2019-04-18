@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>feeding</key>
+	<string>feeder/feeding</string>
+	<key>status</key>
+	<string>feeder/status</string>
+	<key>proximity_feedling</key>
+	<string>feeder/proximity_feeding</string>
+	<key>main</key>
+	<string>feeder/main</string>
+	<key>manual</key>
+	<string>feeder/manual</string>
+</dict>
+</plist>

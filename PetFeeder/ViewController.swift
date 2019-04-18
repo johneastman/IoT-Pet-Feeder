@@ -74,6 +74,12 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        publish(messageText: <#T##String#>, topic: <#T##String#>)
+        
+    }
+    
     @IBAction func feedPetButtonAction(_ sender: UIButton) {
         
         // Disable button while feeder is active
@@ -82,8 +88,15 @@ class ViewController: UIViewController {
         feedPetButton.isUserInteractionEnabled = false
         
         // Get information from settings to check whether the user can feed their pet today.
-        guard let settings = UserDefaults.standard.dictionary(forKey: "settings") as? [String: String]  else {
-            presentAlert(title: "Alert", message: "Unable to load settings")
+        guard let settings = loadSettings() else {
+            
+            // Re-enable button while feeder is active
+            feedPetButton.alpha = 1
+            feedPetButton.isEnabled = true
+            feedPetButton.isUserInteractionEnabled = true
+            
+            self.tabBarController?.selectedIndex = 1
+            presentAlert(title: "Settings Alert", message: "Please set your prefered setting before proceeding")
             return
         }
         guard let numTimesToFeed = settings["times"] else {
@@ -133,6 +146,13 @@ class ViewController: UIViewController {
         let OKAction = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // Load settings from UserDefaults
+    func loadSettings() -> [String:String]? {
+        guard let settings = UserDefaults.standard.dictionary(forKey: "settings") as? [String: String] else {
+            return nil
+        }
     }
     
     /*

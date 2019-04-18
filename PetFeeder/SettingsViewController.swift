@@ -15,8 +15,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        saveSettings()
     }
     
     @IBAction func feedingaction(_ sender: UITextField) {
@@ -28,10 +30,15 @@ class SettingsViewController: UIViewController {
         // Dismiss numberpad
         perDayInput.resignFirstResponder()
         
+        saveSettings()
+    }
+    
+    // Save the user's preferred settings
+    func saveSettings() {
         let settings:[String:String] =
             ["times":  perDayInput.text!,
              "manual": feederManualOverrideOutlet.titleForSegment(at: feederManualOverrideOutlet.selectedSegmentIndex)!]
-
+        
         // Save settings
         UserDefaults.standard.set(settings, forKey: "settings")
     }

@@ -2,13 +2,19 @@
 This is an Internet of Things (IoT) Pet Feeder prototype that was developed for our final project in an IoT course at Champlain College. Developed by Caitlin Chapdelaine and John Eastman.
 
 ## Main Features
-The app consists of two primary views: the main view and the settings view. The main view is where the user primarily interacts with the app, feeding their pet manually and seeing how many times their pet has been fed. The settings view allows the user to set the number of times the pet is fed and enable or disable the proximity sensor on the feeder.
+The app consists of two primary views: the main view and the settings view. The main view is where the user primarily interacts with the app, feeding their pet manually and seeing how many times their pet has been fed. The settings view allows the user to set the number of times the pet is fed and enable or disable the ultrasonic sensor on the feeder.
 
 | Main View | Settings View |
 |:---------:|:-------------:|
 | ![Main View](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-04-22%20at%2017.05.15.png) | ![Settings View](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-04-22%20at%2017.06.02.png) |
 
+## Running the App
+The app was develop in Xcode with Swift 5. The app uses CocoaMQTT, which was installed with CocoaPods. To run the app, open the Xcode workspace file (PetFeeder.xcworkspace).
+
+The server was written in Python. The required dependencies for this script are [paho-mqtt](https://pypi.org/project/paho-mqtt/) and [RPi.GPIO](https://pypi.org/project/RPi.GPIO/). This script was run on a Raspberry Pi.
+
 ## Prototype Images
+The following are images of the physical prototype that was created for this project.
 
 ### Front of Feeder
 ![Front](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/feeder_front.jpg)
@@ -22,7 +28,7 @@ The app consists of two primary views: the main view and the settings view. The 
 ### Door Open
 ![Open](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/servo_door_open.jpg)
 
-### Priximity Sensor
+### Ultrasonic Sensor
 ![Sensor](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/proximity_sensor.jpg)
 
 ## Discussion

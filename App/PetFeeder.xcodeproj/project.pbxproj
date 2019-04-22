@@ -19,7 +19,6 @@
 		ED411AA4224557710018B9A4 /* PetFeederUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED411AA3224557710018B9A4 /* PetFeederUITests.swift */; };
 		ED411AB2224565930018B9A4 /* topics.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED411AB1224565930018B9A4 /* topics.plist */; };
 		ED93AFAE2256A0FF00738AB2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AFAD2256A0FF00738AB2 /* SettingsViewController.swift */; };
-		ED9E1020225A756000728C2B /* Feeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E101F225A756000728C2B /* Feeder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		ED411AA5224557710018B9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED411AB1224565930018B9A4 /* topics.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = topics.plist; sourceTree = "<group>"; };
 		ED93AFAD2256A0FF00738AB2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		ED9E101F225A756000728C2B /* Feeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeder.swift; sourceTree = "<group>"; };
 		F843E8995B9275AEEF9A099B /* Pods-PetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFeeder.debug.xcconfig"; path = "Target Support Files/Pods-PetFeeder/Pods-PetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +143,6 @@
 			children = (
 				ED411A832245576E0018B9A4 /* AppDelegate.swift */,
 				ED411A852245576E0018B9A4 /* ViewController.swift */,
-				ED9E101F225A756000728C2B /* Feeder.swift */,
 				ED411AB1224565930018B9A4 /* topics.plist */,
 				ED411A872245576E0018B9A4 /* Main.storyboard */,
 				ED93AFAD2256A0FF00738AB2 /* SettingsViewController.swift */,
@@ -406,7 +403,6 @@
 				ED411A862245576E0018B9A4 /* ViewController.swift in Sources */,
 				ED411A842245576E0018B9A4 /* AppDelegate.swift in Sources */,
 				ED93AFAE2256A0FF00738AB2 /* SettingsViewController.swift in Sources */,
-				ED9E1020225A756000728C2B /* Feeder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,20 @@ The app consists of two primary views: the main view and the settings view. The 
 
 ## Prototype Images
 
-| Front of Feeder | Back of Feeder |
-|:---------------:|:--------------:|
-| ![Front](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/feeder_front.jpg) | ![Back](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/feeder_back.jpg) |
+### Front of Feeder
+![Front](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/feeder_front.jpg)
+
+### Back of Feeder 
+![Back](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/feeder_back.jpg)
+
+### Door Closed
+![Closed](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/servo_door_closed.jpg)
+
+### Door Open
+![Open](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/servo_door_open.jpg)
+
+### Priximity Sensor
+![Sensor](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/proximity_sensor.jpg)
 
 ## Discussion
 A features we wanted to add was having the number of times the pet had been fed reset every day. On the settings view, the textfield labeled "Feedings Per Day" implies that this feature is implemented, but due to time constraints, we were unable to implement this feature.

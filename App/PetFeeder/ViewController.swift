@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     
     var mqtt:CocoaMQTT!
     
+    var isConnected:Bool = false
+    
     let feeder:Feeder = Feeder()
     
     let username:String = "bnnawkvq"
@@ -76,8 +78,16 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        publish(messageText: <#T##String#>, topic: <#T##String#>)
-        
+        if isConnected {
+            if let settings = loadSettings() {
+                guard let manualOverride = settings["manual"] else {
+                    return
+                }
+                publish(messageText: manualOverride, topic: "feeder/override")
+            } else {
+                publish(messageText: "On", topic: "feeder/override")
+            }
+        }
     }
     
     @IBAction func feedPetButtonAction(_ sender: UIButton) {
@@ -99,6 +109,7 @@ class ViewController: UIViewController {
             presentAlert(title: "Settings Alert", message: "Please set your prefered setting before proceeding")
             return
         }
+        
         guard let numTimesToFeed = settings["times"] else {
             return
         }
@@ -153,18 +164,8 @@ class ViewController: UIViewController {
         guard let settings = UserDefaults.standard.dictionary(forKey: "settings") as? [String: String] else {
             return nil
         }
+        return settings
     }
-    
-    /*
-    func checkDate() {
-        
-        if let settings = UserDefaults.standard.string(forKey: "previousDate") {
-            // A previous date was found
-            
-        } else {
-            UserDefaults.standard.set(Date(), forKey: "previousDate")
-        }
-    }*/
 }
 
 
@@ -173,8 +174,6 @@ extension ViewController: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
-    
-        guard let _ = message.string else { return }
         
         do {
             switch message.topic {
@@ -205,6 +204,9 @@ extension ViewController: CocoaMQTTDelegate {
             
             topic = try getTopic(topicDescription: "feeding")
             mqtt.subscribe(topic)
+            
+            // Set connection status
+            isConnected = true
         } catch {
             // ERROR
         }

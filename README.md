@@ -1,5 +1,5 @@
 # IoT-Pet-Feeder
-This is an Internet of Things (IoT) Pet Feeder prototype that was developed for our final project in an IoT course at Champlain College.
+This is an Internet of Things (IoT) Pet Feeder prototype that was developed for our final project in an IoT course at Champlain College. Developed by Caitlin Chapdelaine and John Eastman.
 
 ## Main Features
 The app consists of two primary views: the main view and the settings view. The main view is where the user primarily interacts with the app, feeding their pet manually and seeing how many times their pet has been fed. The settings view allows the user to set the number of times the pet is fed and enable or disable the proximity sensor on the feeder.

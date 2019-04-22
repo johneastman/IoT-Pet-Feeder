@@ -3,9 +3,6 @@ import RPi.GPIO as GPIO
 import json
 import random
 import time
-    
-# 0 == open
-# 90 == closed
 
 class Feeder:
     
@@ -14,8 +11,11 @@ class Feeder:
         self.can_feed = True
         
         self.SERVO = 18
-        self.TRIG = 23
-        self.ECHO = 24
+        self.TRIG = 16
+        self.ECHO = 20
+        
+        self.CLOSE = 100
+        self.OPEN = 180
         
         # GPIO Setup
         GPIO.setmode(GPIO.BCM)
@@ -84,7 +84,6 @@ class Feeder:
         self.on_message_topics[topic](message_string)
         
     def manual_override(self, message):
-        print(message)
         self.can_feed = (message == "On")
         
     def move_door(self, angle):
@@ -92,9 +91,9 @@ class Feeder:
         self.pwm.ChangeDutyCycle(duty)
 
     def feed_pet(self, message):
-        self.move_door(0)
+        self.move_door(self.OPEN)
         time.sleep(2)
-        self.move_door(90)
+        self.move_door(self.CLOSE)
         self.mqttc.publish("feeder/feeding", "")
     
     def start(self):
@@ -103,7 +102,6 @@ class Feeder:
             while True:
                 if time.time() - start_time >= 2:
                     distance = self.distance()
-                    print(distance)
                     if distance < 30 and self.can_feed:
                         self.mqttc.publish("feeder/proximity_feeding", "")
                         self.feed_pet("")
@@ -129,3 +127,5 @@ class Feeder:
 if __name__ == "__main__":
     feeder = Feeder("Pet Feeder")
     feeder.start()
+
+

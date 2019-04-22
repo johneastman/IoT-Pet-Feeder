@@ -10,10 +10,12 @@ class Feeder:
         
         self.can_feed = True
         
+        # pins that are being used
         self.SERVO = 18
         self.TRIG = 16
         self.ECHO = 20
         
+        # open and close settings for the servo
         self.CLOSE = 100
         self.OPEN = 180
         
@@ -23,6 +25,7 @@ class Feeder:
         GPIO.setup(self.TRIG, GPIO.OUT)
         GPIO.setup(self.ECHO, GPIO.IN)
 
+        # setting up the servo as pwm (Pulse-width modulation)
         self.pwm = GPIO.PWM(self.SERVO, 100)
         self.pwm.start(5)
         
@@ -86,16 +89,20 @@ class Feeder:
     def manual_override(self, message):
         self.can_feed = (message == "On")
         
+    # move servo arm to open / close door
     def move_door(self, angle):
         duty = float(angle) / 10.0 + 2.5
         self.pwm.ChangeDutyCycle(duty)
-
+    
+    # opens door for 2 seconds to let out food and then closes door
+    # also publishes message to the app letting it know the pet has been fed
     def feed_pet(self, message):
         self.move_door(self.OPEN)
         time.sleep(2)
         self.move_door(self.CLOSE)
         self.mqttc.publish("feeder/feeding", "")
     
+    # check the proximity sensor every 2 seconds 
     def start(self):
         start_time = time.time()
         try:

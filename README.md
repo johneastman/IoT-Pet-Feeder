@@ -1,5 +1,5 @@
 # IoT-Pet-Feeder
-This is an Internet of Things (IoT) Pet Feeder prototype that was developed for our final project in an IoT course at Champlain College. Developed by Caitlin Chapdelaine and John Eastman.
+This is an Internet of Things (IoT) Pet Feeder prototype that was developed for our final project in an IoT course at Champlain College. This project was developed by Caitlin Chapdelaine and John Eastman.
 
 ## Main Features
 The app consists of two primary views: the main view and the settings view. The main view is where the user primarily interacts with the app, feeding their pet manually and seeing how many times their pet has been fed. The settings view allows the user to set the number of times the pet is fed and enable or disable the ultrasonic sensor on the feeder.
@@ -7,6 +7,8 @@ The app consists of two primary views: the main view and the settings view. The 
 | Main View | Settings View |
 |:---------:|:-------------:|
 | ![Main View](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-04-22%20at%2017.05.15.png) | ![Settings View](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-04-22%20at%2017.06.02.png) |
+
+The app connects to a Raspberry Pi via an MQTT broker. With the app, the user can interact with a servo that moves a door intended to dispense pet food. An ultrasonic sensor also detects the proximity of pets, and when a pet gets close enough, food is automaticlly dispenced and the user is informed that their pet has been fed.
 
 ## Running the App
 The app was develop in Xcode with Swift 5. The app uses CocoaMQTT, which was installed with CocoaPods. To run the app, open the Xcode workspace file (PetFeeder.xcworkspace).
@@ -36,7 +38,7 @@ The following are images of the physical prototype that was created for this pro
 ## Discussion
 If we were to keep working on this project, we would have implemented a feature that would reset the number of times the pet has been fed every day. On the settings view, the textfield labeled "Feedings Per Day" implies that this feature is implemented, but due to time constraints, we were unable to implement this feature.
 
-This project collects data from the ultrasonic sensor but it does not store this information. It uses the data it gets to help determine if the servo should move the arm to feed the pet.
+This project collects data from the ultrasonic sensor but it does not store this information. It uses the data it gets to help determine if the servo should open the door to dispense food.
 
 ## License
 This project is licensed under the [MIT License](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/LICENSE).

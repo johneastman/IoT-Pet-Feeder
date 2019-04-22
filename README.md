@@ -26,4 +26,7 @@ The app consists of two primary views: the main view and the settings view. The 
 ![Sensor](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/images/proximity_sensor.jpg)
 
 ## Discussion
-A features we wanted to add was having the number of times the pet had been fed reset every day. On the settings view, the textfield labeled "Feedings Per Day" implies that this feature is implemented, but due to time constraints, we were unable to implement this feature.
+A feature we wanted to add was having the number of times the pet had been fed reset every day. On the settings view, the textfield labeled "Feedings Per Day" implies that this feature is implemented, but due to time constraints, we were unable to implement this feature.
+
+## License
+This project is licensed under the [MIT License](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/LICENSE).

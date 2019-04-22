@@ -13,6 +13,8 @@ The app was develop in Xcode with Swift 5. The app uses CocoaMQTT, which was ins
 
 The server was written in Python. The required dependencies for this script are [paho-mqtt](https://pypi.org/project/paho-mqtt/) and [RPi.GPIO](https://pypi.org/project/RPi.GPIO/). This script was run on a Raspberry Pi.
 
+The broker was setup using [CloudMQTT](https://www.cloudmqtt.com/).
+
 ## Prototype Images
 The following are images of the physical prototype that was created for this project.
 

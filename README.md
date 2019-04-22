@@ -34,5 +34,7 @@ The following are images of the physical prototype that was created for this pro
 ## Discussion
 If we were to keep working on this project, we would have implemented a feature that would reset the number of times the pet has been fed every day. On the settings view, the textfield labeled "Feedings Per Day" implies that this feature is implemented, but due to time constraints, we were unable to implement this feature.
 
+This project collects data from the ultrasonic sensor but it does not store this information. It uses the data it gets to help determine if the servo should move the arm to feed the pet.
+
 ## License
 This project is licensed under the [MIT License](https://github.com/johneastman/IoT-Pet-Feeder/blob/master/LICENSE).

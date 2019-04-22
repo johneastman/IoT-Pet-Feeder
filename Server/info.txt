@@ -1,0 +1,4 @@
+USERNAME:bnnawkvq
+PASSWORD:es5Z7ceUhB65
+PORT:15055
+SERVER:m16.cloudmqtt.com
